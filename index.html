@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto R3AL - Presença Digital Completa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 14px;
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+        color: #f2f2f2;
+        line-height: 1.8;
+    }
+
+
+    header, section {
+      padding: 4rem 2rem;
+      max-width: 60rem;
+      margin: 0 auto;
+    }
+
+    /* Definições globais */
+    body {
+        font-family: Verdana, sans-serif;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    /* Estilização geral para títulos */
+    h1, h2, h3, p {
+        text-align: center;
+        color: #ffffff;
+        letter-spacing: 0.065em;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Especificidades por nível de título */
+    h1 {
+        font-family: Orbitron, sans-serif;
+        font-size: 20px;
+        text-shadow: 0 0 20px #ffffff;
+    }
+
+    h2 {
+        text-shadow: 0 0 25px #00ffd5;
+    }
+
+    h3 {
+        text-shadow: 0 0 8px #00ffd5;
+    }
+
+    p {
+        text-shadow: 0 0 10px #00ffd5;
+        letter-spacing: 0.075em;
+    }
+
+
+    .hero {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #00ffd5;
+      border-radius: 1rem;
+      box-shadow: 0 0 1.25rem rgba(0, 255, 213, 0.3);
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+
+    .hero h3 {
+      font-size: 2.2rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+    }
+    .hero span {
+      color: #00ffd5;
+    }
+
+    .lead-form {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #00ffd5;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 0 0.625rem #00ffd5;
+    }
+
+    .lead-form input {
+      width: 100%;
+      max-width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 0.5rem;
+      color: #f2f2f2;
+    }
+
+    .lead-form button {
+      background-color: #00ffd5;
+      color: #000;
+      padding: 0.875rem;
+      border: none;
+      border-radius: 0.5rem;
+      width: 100%;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: 1rem;
+    }
+
+    .lead-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0.625rem #00ffd5;
+    }
+
+    .destaque {
+      color: #00ffd5;
+      font-weight: bold;
+    }
+
+    .beneficios {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+
+    .beneficio {
+      flex: 1;
+      min-width: 12.5rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      border: 1px solid #00ffd5;
+    }
+
+    .cta-box {
+      background: radial-gradient(circle at center, #00ffd5 0%, #0d0d0d 100%);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+      box-shadow: 0 0 1.25rem #00ffd5;
+    }
+
+    .cta-box button {
+      background-color: #00ffd5;
+      color: #000;
+      margin-top: 1rem;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .cta-box button:hover {
+      transform: scale(1.1);
+    }
+
+    .bio, .depoimentos, .faq {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #333;
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    .bio-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bio-container img {
+      width: 11rem;
+      border-radius: 0.625rem;
+      border: 2px solid #00ffd5;
+    }
+
+    .depoimentos blockquote {
+      border-left: 4px solid #00ffd5;
+      padding-left: 1.25rem;
+      margin: 1rem 0;
+      font-style: italic;
+      color: #ccc;
+    }
+
+    .pergunta-com-imagem {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pergunta-com-imagem img {
+      width: 18rem;
+      max-width: 100%;
+      border-radius: 0.75rem;
+      border: 2px solid #00ffd5;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+
+    <h1><span>Projeto R3AL</span></h1>
+    <h2>Reação > Reinvenção > Realidade</h2>
+    <h3>Transformações Digitais com Alma, Desejo e Propósito</h3>
+
+    <p style="text-align: center;">Do caos à criação. Da ideia confusa ao portal digital que te representa. Aqui, você reprograma sua presença com estética, intenção e impacto.</p>
+
+
+    <div class="lead-form">
+      <h2>Conecte-se</h2>
+      <input type="text" placeholder="Seu nome" />
+      <input type="email" placeholder="Seu e-mail" />
+      <button>Quero despertar meu poder digital</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>Você sente que está escondido?</h2>
+    <div class="pergunta-com-imagem">
+      <div>
+        <p>Negócios com alma não podem mais viver na sombra:</p>
+        <ul>
+          <li>Você tem algo verdadeiro, mas não sabe como mostrar</li>
+          <li>Sua página atual não reflete seu poder</li>
+          <li>Seu digital está frio e você quer magnetismo</li>
+        </ul>
+      </div>
+      <img src="Gemini_Generated_Image_1zrsrd1zrsrd1zrs.png" alt="Representação de estar escondido" />
+    </div>
+  </section>
+
+  <section class="bio">
+    <h2>Eu sou...</h2>
+    <div class="bio-container">
+      <img src="Gemini_Generated_Image_darg7ldarg7ldarg.png" alt="Foto de Julio" />
+      <blockquote>Julio, um criador digital que transforma ideias em realidade. Minha jornada é marcada por superação, fé e a paixão pela criação. Não me limito a desenvolver páginas; eu traduzo a essência das ideias em códigos, estética e uma presença digital impactante. Meu propósito é claro: guiar você a encontrar e expressar a sua própria luz no mundo digital, com autenticidade e poder.</blockquote>s
+    </div>
+  </section>
+
+  <section class="depoimentos">
+    <h2>Depoimentos</h2>
+    <blockquote>"Nunca pensei que minha presença digital pudesse refletir tanto minha essência. O Projeto R3AL foi além do design." – Mariana S.</blockquote>
+    <blockquote>"Julio é diferente. Ele não entrega só um site, ele entrega alma, clareza e coragem para aparecer." – Rafael T.</blockquote>
+  </section>
+
+  <section class="faq">
+    <h2>Perguntas Frequentes</h2>
+    <ul>
+      <li><strong>Quanto tempo leva?</strong> Em média de 3 a 7 dias úteis, dependendo da sua resposta no processo.</li>
+      <li><strong>Eu preciso saber tecnologia?</strong> Não. Tudo é pensado para que você só precise brilhar.</li>
+      <li><strong>Como posso pagar?</strong> Pix, cartão ou link personalizado, conforme sua preferência.</li>
+    </ul>
+  </section>
+
+  <section class="cta-box">
+    <p>O universo digital está chamando. Sua hora é <span class="destaque">agora</span>.</p>
+    <p>Desperte sua presença digital com intensidade, verdade e desejo.</p>
+    <button>Ativar minha nova realidade</button>
+  </section>
+</body>
+</html>
